@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+$main_color: #555;
+$sub_color: rgb(90, 160, 230);
+
+$breakpoint: (
+  sp: 'screen and (max-width: 480px)',
+  pc: 'screen and (min-width: 481px)'
+);

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head prefix="og: http://ogp.me/ns#">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+        <meta property="og:url" content="https://mahi2121.github.io/portfolio/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="ポートフォリオサイト" />
+        <meta property="og:description" content="ポートフォリオサイトです。" />
+        <meta property="og:site_name" content="ポートフォリオサイト" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/mahi2121/portfolio/main/img/about.png" />
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    </head>
+
+
+<body>
+    <header>
+
+        <div id="app">
+            <div class="hamburger_btn" v-on:click='ActiveBtn=!ActiveBtn'>
+              <span class="line line_01" v-bind:class="{'btn_line01':ActiveBtn}"></span>
+              <span class="line line_02" v-bind:class="{'btn_line02':ActiveBtn}"></span>
+              <span class="line line_03" v-bind:class="{'btn_line03':ActiveBtn}"></span>
+            </div>
+
+            <transition name="menu">
+              <div class="menu" v-show="ActiveBtn">
+                  <ul>
+                    <li class="sidebar-item" v-on:click='ActiveBtn=!ActiveBtn'><a href="#about" >ABOUT</a></li>
+                    <li class="sidebar-item" v-on:click='ActiveBtn=!ActiveBtn'><a href="#skill" >SKILL</a></li>
+                    <li class="sidebar-item" v-on:click='ActiveBtn=!ActiveBtn'><a href="#works" >WORKS</a></li>
+                    <li class="sidebar-item" v-on:click='ActiveBtn=!ActiveBtn'><a href="#contact" >CONTACT</a></li>
+                  </ul>
+              </div>
+          </transition>
+        </div>
+
+        <nav class="pc-nav">
+            <ul class="pc-list">
+                <li class="pc-item"><a href="#about" class="pc-anchor">ABOUT</a></li>
+                <li class="pc-item"><a href="#skill" class="pc-anchor">SKILL</a></li>
+                <li class="pc-item"><a href="#works" class="pc-anchor">WORKS</a></li>
+                <li class="pc-item"><a href="#contact" class="pc-anchor">CONTACT</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="visual">
+        <div class="visual-title">
+            <h1 class="visual-main-title">PORTFOLIO</h1>
+            <h2 class="visual-sub-title">by Hiroki Matsuda</h2>
+        </div>
+    </section>
+
+    <main class="content">
+        <section id="about">
+            <h2 class="section-title">ABOUT</h2>
+            <div class="about-inr">
+                <img class="about-img" src="img/about.png" alt="">
+                <div class="detail">
+                    <h3 class="name">松田 紘輝</h3>
+                    <p>
+                        大学卒業後、カスタマーエンジニア職を2年間経験しました。
+                        その後、WEB業界に転職するために自己学習を行いつつ、半年間職業訓練校に通いました。
+                        フロントエンドエンジニアとしてキャリアを積んでいきたいと考えています。
+                        コーディングやプログラミングに没頭しがちです。
+                    </p>
+                    <table>
+                        <tr>
+                            <th>生年月日</th>
+                            <td>1995年10月28日</td>
+                        </tr>
+
+                        <tr>
+                            <th>出身地</th>
+                            <td>宮崎県延岡市</td>
+                        </tr>
+
+                        <tr>
+                            <th>趣味</th>
+                            <td>パソコン</td>
+                        </tr>
+
+                        <tr>
+                            <th>好きな食べ物</th>
+                            <td>博多ラーメン</td>
+                        </tr>
+
+                        <tr>
+                            <th>休日の過ごし方</th>
+                            <td>オンライン飲み会</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="skill">
+            <h2 class="section-title">SKILL</h2>
+            <div class="skill-list">
+                <div class="skill-item">
+                    <h3 class="skill-title">HTML</h3>
+                    <div class="skill-rating rating">
+                        <div class="rate rate4"></div>
+                    </div>
+                    <p class="skill-text">
+                        サイト制作に必要なHTMLの基礎スキルは備わっています。
+                        自分以外の人が見ても分かりやすいコーディングを心がけています。
+                    </p>
+                </div>
+
+                <div class="skill-item">
+                    <h3 class="skill-title">CSS/Sass</h3>
+                    <div class="skill-rating rating">
+                        <div class="rate rate3"></div>
+                    </div>
+                    <p class="skill-text">
+                        サイト制作に必要なCSSの基礎スキルは備わっています。
+                        本ポートフォリオサイトはSassを使用して制作しました。
+                    </p>
+                </div>
+
+                <div class="skill-item">
+                    <h3 class="skill-title">JavaScript</h3>
+                    <div class="skill-rating rating">
+                        <div class="rate rate2"></div>
+                    </div>
+                    <p class="skill-text">
+                        現在勉強中です。サイト制作の際にはjQueryやvue.jsを使用しています。
+                    </p>
+                </div>
+
+                <div class="skill-item">
+                    <h3 class="skill-title">PHP</h3>
+                    <div class="skill-rating rating">
+                        <div class="rate rate2"></div>
+                    </div>
+                    <p class="skill-text">
+                        現在勉強中です。wordpress化の際に使用しています。
+                    </p>
+                </div>
+
+                <div class="skill-item">
+                    <h3 class="skill-title">WordPress</h3>
+                    <div class="skill-rating rating">
+                        <div class="rate rate3"></div>
+                    </div>
+                    <p class="skill-text">
+                        テーマファイルの作成が可能です。
+                        wordpress化の際にはカスタム投稿やカスタムフィールドの追加が可能です。
+                    </p>
+                </div>
+
+                <div class="skill-item">
+                    <h3 class="skill-title">Photoshop</h3>
+                    <div class="skill-rating rating">
+                        <div class="rate rate3"></div>
+                    </div>
+                    <p class="skill-text">
+                        バナー制作が可能です。また、写真や画像を用途に応じて加工することも可能です。
+                    </p>
+                </div>
+
+                <div class="skill-item">
+                    <h3 class="skill-title">Illustrator</h3>
+                    <div class="skill-rating rating">
+                        <div class="rate rate3"></div>
+                    </div>
+                    <p class="skill-text">
+                        名刺や簡単なロゴの作成が可能です。
+                    </p>
+                </div>
+
+                <div class="skill-item">
+                    <h3 class="skill-title">XD</h3>
+                    <div class="skill-rating rating">
+                        <div class="rate rate4"></div>
+                    </div>
+                    <p class="skill-text">
+                        コーポレートサイトやランディングページなどのレイアウトを作る際に使用しています。
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section id="works">
+            <h2 class="section-title">WORKS</h2>
+            <div class="works-list">
+
+                <div class="works-item">
+                    <img class="works-img" src="img/works2.png" alt="">
+                    <h3 class="works-title">株式会社MURASH様</h3>
+                    <h4 class="works-url"> <a href="https://www.murash.jp/" target="_blank">https://www.murash.jp/</a></h4>
+
+                    <p class="works-text">
+                        コーポレートサイトのリニューアルに伴い、設計からデザイン、動画編集、コーディング、wordpress化を行いました。
+                        制作期間は約1カ月(150時間)です。<br>
+                        概要やソースコードなどの詳細はこちらに公開しています。<br>
+                        <a href="https://github.com/mahi2121/murash" target="_blank">https://github.com/mahi2121/murash</a>
+                    </p>
+                </div>
+
+                <div class="works-item">
+                    <img class="works-img" src="img/works1.png" alt="">
+                    <h3 class="works-title">ポートフォリオサイト(本サイト)</h3>
+                    <h4 class="works-url"><br></h4>
+
+                    <p class="works-text">
+                        本ポートフォリオサイトの制作にあたっては、vue.jsやSassを使用しています。
+
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="contact">
+            <h2 class="section-title">CONTACT</h2>
+            <h3 class="contact-message">お気軽にご連絡ください。</h3>
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd11X96OrQxQDFTZ-71sERj7YQjpsxGNK3hck-1oyE0CMMt2Q/formResponse"
+                method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+                <table>
+                    <tr>
+                        <th valign=" top"><label for=" form-name">名前</label></th>
+                        <td><input id="form-name" type="text" name="entry.2005620554" placeholder="山田太郎" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th valign="top"><label for="form-mail">メールアドレス</label></th>
+                        <td><input id="form-mail" type="email" name="entry.1045781291" placeholder="info@example.com"
+                                required=""></td>
+                    </tr>
+                    <tr>
+                        <th valign="top"><label for="form-detail">お問い合わせ内容</label></th>
+                        <td><textarea id="form-detail" name="entry.839337160" placeholder="お問合せ内容を入力してください。"
+                                required=""></textarea></td>
+                    </tr>
+                </table>
+
+                <p class=" send"><button type="submit" name="button" value="送信する">送信する</button></p>
+
+            </form>
+
+            <script type="text/javascript">var submitted = false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                onload="if(submitted){window.location='contact-page.html';}"></iframe>
+
+        </section>
+
+
+        <footer>
+            <small>&copy;Hiroki Matsuda. All Rights Reserved.</small>
+        </footer>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

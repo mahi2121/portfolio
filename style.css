@@ -1,0 +1,466 @@
+@charset "UTF-8";
+li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: middle;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+body {
+  color: #555;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.content {
+  padding: 0 5%;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.section-title {
+  padding: 50px 0 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* ビジュアル */
+.visual {
+  height: 500px;
+  background-image: url(img/visual.jpg);
+  position: relative;
+  background-position: -450px 0px;
+}
+
+.visual .visual-title {
+  color: #222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.visual .visual-title .visual-main-title {
+  font-size: 30px;
+}
+
+.visual .visual-title .visual-sub-title {
+  font-size: 14px;
+}
+
+/* アバウト */
+#about .about-inr img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+#about .about-inr .name {
+  margin: 20px 0;
+}
+
+#about .about-inr table {
+  margin-top: 20px;
+}
+
+#about .about-inr table th {
+  text-align: left;
+  width: 10em;
+}
+
+/* スキル */
+#skill .skill-item {
+  margin-bottom: 50px;
+}
+
+#skill .skill-item .rate {
+  position: relative;
+  font-size: 16px;
+  display: inline-block;
+  width: 100%;
+  height: 20px;
+  letter-spacing: .3em;
+}
+
+#skill .skill-item .rate:before,
+#skill .skill-item .rate:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  content: "★★★★★";
+}
+
+#skill .skill-item .rate:before {
+  color: #ddd;
+}
+
+#skill .skill-item .rate:after {
+  overflow: hidden;
+  color: #5aa0e6;
+}
+
+#skill .skill-item .rate0:after {
+  width: 0px;
+}
+
+#skill .skill-item .rate1:after {
+  width: 20px;
+}
+
+#skill .skill-item .rate2:after {
+  width: 40px;
+}
+
+#skill .skill-item .rate3:after {
+  width: 60px;
+}
+
+#skill .skill-item .rate4:after {
+  width: 80px;
+}
+
+/* ワークス */
+#works .works-item {
+  margin-bottom: 50px;
+}
+
+#works .works-item .works-img {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px #000 solid;
+}
+
+#works .works-item .works-title {
+  font-size: 16px;
+}
+
+#works .works-item .works-text {
+  margin-top: 10px;
+}
+
+/* コンタクト */
+#contact .contact-message {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#contact form :focus {
+  outline: none;
+}
+
+#contact table {
+  width: 100%;
+}
+
+#contact table th {
+  text-align: left;
+  width: 14em;
+  display: block;
+}
+
+#contact table td {
+  display: block;
+}
+
+#contact table td input, #contact table td textarea {
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 1px;
+}
+
+#contact table td textarea {
+  height: 150px;
+}
+
+#contact table td ::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+#contact table td :-ms-input-placeholder {
+  color: #ccc;
+}
+
+#contact table td ::-ms-input-placeholder {
+  color: #ccc;
+}
+
+#contact table td ::placeholder {
+  color: #ccc;
+}
+
+#contact .send {
+  color: #fff;
+}
+
+#contact .send button {
+  padding: 8px 30px;
+  background-color: #5aa0e6;
+  margin: 20px auto 100px;
+  display: block;
+}
+
+/* フッター */
+small {
+  display: block;
+  text-align: center;
+}
+
+/* サンクスページ */
+#thanks .massage, #thanks .detail, #thanks .go-top {
+  text-align: center;
+  margin: 30px auto;
+}
+
+/* ハンバーガー */
+.pc-nav {
+  display: none;
+}
+
+.hamburger_btn {
+  mix-blend-mode: difference;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.hamburger_btn .line {
+  position: absolute;
+  left: 10px;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  text-align: center;
+}
+
+.hamburger_btn .line_01 {
+  top: 15px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.hamburger_btn .line_02 {
+  top: 25px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.hamburger_btn .line_03 {
+  top: 35px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.btn_line01 {
+  -webkit-transform: translateY(10px) rotate(-45deg);
+          transform: translateY(10px) rotate(-45deg);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.btn_line02 {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  opacity: 0;
+}
+
+.btn_line03 {
+  -webkit-transform: translateY(-10px) rotate(45deg);
+          transform: translateY(-10px) rotate(45deg);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.menu-enter-active, .menu-leave-active {
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.menu-enter, .menu-leave-to {
+  opacity: 0;
+}
+
+.menu-leave, .menu-enter-to {
+  opacity: 1;
+}
+
+.menu li:nth-child(1) {
+  margin-top: 100px;
+}
+
+.menu li {
+  list-style: none;
+  line-height: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu {
+  background-color: #fff;
+  z-index: 30;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.menu a {
+  color: #555;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 481px) {
+  .content {
+    width: 960px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .section-title {
+    font-size: 40px;
+    padding: 100px 0 30px;
+    text-align: center;
+  }
+  /* ヘッダー */
+  header .hamburger_btn {
+    display: none;
+  }
+  header .pc-nav {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+  }
+  header .pc-nav .pc-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 40%;
+    margin: 0 auto;
+  }
+  header .pc-nav .pc-list .pc-item {
+    margin: 0 2%;
+  }
+  header .pc-nav .pc-list .pc-item a {
+    color: #fff;
+    height: 58px;
+    line-height: 58px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  header .pc-nav .pc-list .pc-item a:hover {
+    opacity: .5;
+  }
+  /* ビジュアル */
+  .visual {
+    background-size: cover;
+    background-position: 0px 0px;
+  }
+  .visual .visual-title .visual-main-title {
+    font-size: 60px;
+  }
+  .visual .visual-title .visual-sub-title {
+    font-size: 16px;
+  }
+  /* アバウト */
+  #about .about-inr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #about .about-inr img {
+    width: 30%;
+    margin-right: 15%;
+  }
+  #about .about-inr .detail table {
+    margin-top: 20px;
+  }
+  #about .about-inr .detail th {
+    text-align: left;
+    width: 12em;
+  }
+  #about .about-inr .detail .name {
+    margin-top: 0;
+  }
+  /* スキル */
+  #skill .skill-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #skill .skill-list .skill-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 46%;
+            flex: 0 0 46%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  /* ワークス */
+  #works .works-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #works .works-list .works-item {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+  }
+  #works .works-list .works-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* コンタクトフォーム */
+  #contact form {
+    width: 60%;
+    margin: 0 auto;
+  }
+  #contact table td textarea {
+    height: 200px;
+  }
+  #contact button:hover {
+    opacity: .8;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all;
+  }
+}
+/*# sourceMappingURL=style.css.map */
