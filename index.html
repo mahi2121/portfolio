@@ -14,12 +14,12 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
 
 
 <body>
     <header>
-
         <div id="app">
             <div class="hamburger_btn" v-on:click='ActiveBtn=!ActiveBtn'>
               <span class="line line_01" v-bind:class="{'btn_line01':ActiveBtn}"></span>
@@ -47,7 +47,6 @@
                 <li class="pc-item"><a href="#contact" class="pc-anchor">CONTACT</a></li>
             </ul>
         </nav>
-
     </header>
 
     <section class="visual">
@@ -56,8 +55,9 @@
             <h2 class="visual-sub-title">by Hiroki Matsuda</h2>
         </div>
     </section>
-
+    
     <main class="content">
+
         <section id="about">
             <h2 class="section-title">ABOUT</h2>
             <div class="about-inr">
@@ -219,6 +219,7 @@
 
                     <p class="works-text">
                         本ポートフォリオサイトの制作にあたっては、vue.jsやSassを使用しています。
+                        また、JSにてダークモードに対応させました。
                         ソースコードはこちらに公開しています。<br>
                         <a href="https://github.com/mahi2121/portfolio/" target="_blank">https://github.com/mahi2121/portfolio/</a>
                     </p>
@@ -252,7 +253,7 @@
                     </tr>
                 </table>
 
-                <p class=" send"><button type="submit" name="button" value="送信する">送信する</button></p>
+                <p class="send"><button type="submit" name="button" value="送信する">送信する</button></p>
 
             </form>
 
@@ -262,6 +263,11 @@
 
         </section>
 
+        <label class="dark">
+            <input type="checkbox" class="toggle_input" id="modeToggle" />
+            <span class="toggle_btn"></span>
+        </label>
+
 
         <footer>
             <small>&copy;Hiroki Matsuda. All Rights Reserved.</small>
@@ -269,9 +275,11 @@
 
     </main>
 
+    <script src="dark.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="index.js"></script>
+
 
 </body>
 
